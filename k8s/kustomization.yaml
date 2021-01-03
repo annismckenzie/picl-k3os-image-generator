@@ -1,0 +1,7 @@
+namespace: k3os-config-operator-system
+
+bases:
+  - base/
+
+resources:
+  - k3osconfig.yaml
