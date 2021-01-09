@@ -61,7 +61,7 @@ building on a Mac or Windows.
 If you want to build in Docker, you can build a container containing the dependencies using:
 
 ```
-docker build . -t picl-builder:latest
+make build-picl-builder-image
 ```
 
 Then, run the container using:
