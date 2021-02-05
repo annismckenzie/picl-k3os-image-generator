@@ -1,0 +1,8 @@
+apiVersion: config.operators.annismckenzie.github.com/v1alpha1
+kind: K3OSConfig
+metadata:
+  name: default
+  namespace: k3os-config-operator-system
+spec:
+  syncNodeLabels: true
+  syncNodeTaints: false

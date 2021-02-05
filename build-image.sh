@@ -206,6 +206,7 @@ sudo e2label $LODEV_ROOT "root"
 
 ## Initialize root
 echo "== Initializing root... =="
+rm -rf root
 mkdir root
 sudo mount $LODEV_ROOT root
 sudo mkdir root/bin root/boot root/dev root/etc root/home root/lib root/media
@@ -223,6 +224,7 @@ if [ "$IMAGE_TYPE" = "raspberrypi" ]; then
 	PITEMP="$(mktemp -d)"
 	sudo tar -xf deps/raspberrypi-firmware.tar.gz --strip 1 -C $PITEMP
 
+	rm -rf boot
 	mkdir boot
 	sudo mount $LODEV_BOOT boot
 	sudo cp -R $PITEMP/boot/* boot
